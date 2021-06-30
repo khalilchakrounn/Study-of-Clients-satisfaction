@@ -1,0 +1,446 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+
+
+  <div  style="width:1800px; margin:0 auto;">
+
+<div class="container-contact100">
+		<div class="wrap-contact100">
+
+<div class="container pt-12">
+    <div class="row justify-content-md-center">
+        <div class="col-md-6">
+            <h1>Customers Satisfaction</h1>
+            <form action="" id="post-form" class="contact100-form validate-form">
+                {% csrf_token %}
+                <br>
+                <div class="form-group">
+                   <h4>Conference Call</h4>
+                    <input type="range" class="form-range" style="width:350px;" min="0" max="10" step="1" id="Conference call">
+                  <span class="shadow p-3 mb-5 bg-white rounded" id="Conference callv"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <h4>Vocal Messages</h4>
+                    <input type="range" class="form-range" style="width:350px;" min="0" max="10" step="1" id="Messagerie Vocale">
+                  <span class="shadow p-3 mb-5 bg-white rounded" id="Messagerie Vocalev"></span>
+                </div>
+
+                <div class="form-group">
+                    <h4>Fidelity Points</h4>
+                    <input type="range" class="form-range" style="width:350px;" min="0" max="10" step="1" id="Points fidelite">
+                    <span class="shadow p-3 mb-5 bg-white rounded" id="Points fidelitev"></span>
+                </div>
+
+
+
+                <div class="form-group">
+                    <h4>SOS Credit</h4>
+                    <input type="range" class="form-range" style="width:350px;" min="0" max="10" step="1" id="SOS Credit">
+                    <span class="shadow p-3 mb-5 bg-white rounded" id="SOS Creditv"></span>
+                </div>
+
+                <div class="form-group">
+                    <h4>Internet Transfer</h4>
+                    <input type="range" class="form-range" style="width:350px;" min="0" max="10" step="1" id="Transfert Internet">
+                    <span class="shadow p-3 mb-5 bg-white rounded" id="Transfert Internetv"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <h4>Credit Transfer</h4>
+                    <input type="range" class="form-range" style="width:350px;" min="0" max="10" step="1" id="Transfert Credit">
+                    <span class="shadow p-3 mb-5 bg-white rounded" id="Transfert Creditv"></span>
+                </div>
+
+                <div class="form-group">
+                    <h4>Roaming</h4>
+                    <input type="range" class="form-range" style="width:350px;" min="0" max="10" step="1" id="Service Roaming">
+                    <span class="shadow p-3 mb-5 bg-white rounded" id="Service Roamingv"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <h4>Internet Connection</h4>
+                    <input type="range" class="card-header-warning" style="width:350px;" min="0" max="10" step="1" id="Connexion Internet">
+                    <span class="shadow p-3 mb-5 bg-white rounded" id="Connexion Internetv"></span>
+                </div>
+
+                <div class="form-group">
+                    <h4>Orange Money</h4>
+
+                    <input type="range" style="width:350px; background: orange" min="0" max="10" step="1" id="Orange Money">
+                    <span class="shadow p-3 mb-5 bg-white rounded" id="Orange Moneyv"></span>
+                </div>
+
+                <div class="form-group">
+                    <h4>Mobicash Ooredoo</h4>
+                    <input type="range" class="form-range" style="width:350px;" min="0" max="10" step="1" id="Mobicash Ooredoo">
+                    <span class="shadow p-3 mb-5 bg-white rounded" id="Mobicash Ooredoov"></span>
+                </div>
+
+                 <div class="form-group">
+                    <h4>Mdinar</h4>
+                    <input type="range" class="form-range" style="width:350px;" min="0" max="10" step="1" id="Mdinar">
+                    <span class="shadow p-3 mb-5 bg-white rounded" id="Mdinarv"></span>
+                </div>
+
+
+
+                </br>
+
+                <button type="submit" value="Submit" style=" margin:0 auto;" class="btn btn-warning  btn-block col-md-5" data-toggle="modal" data-target="#exampleModal">Predict</button>
+
+                </br></br></br>
+            </form>
+        </div>
+    </div>
+</div>
+ </div>
+    </div>
+ </div>
+
+    <div class="col-md-4" id="CardEmpty" >
+              <div class="card card-chart"  >
+                <div class="card-header card-header-warning" >
+                  <h1>No Predictions</h1>
+                </div>
+                <div class="card-body" >
+                  <h4 class="card-title">No Recommandations</h4>
+
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    <div class="col-md-4" id="SatisfiedCard" hidden>
+              <div class="card card-chart"  >
+                <div class="card-header card-header-success" >
+                  <h1>Satisfied</h1>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Recommandations</h4>
+                  <h6 class="card-category" id="r1">
+                   </h6>
+                    <h6 class="card-category" id="r2">
+                   </h6>
+                    <h6 class="card-category" id="r3">
+                   </h6>
+                    <h6 class="card-category" id="r4">
+                   </h6>
+                    <h6 class="card-category" id="r5">
+                   </h6>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    <div class="col-md-4" id="UnsatisfiedCard" hidden>
+              <div class="card card-chart"  >
+                <div class="card-header card-header-danger" >
+                  <h1>Unsatisfied</h1>
+                </div>
+                <div class="card-body" >
+                  <h4 class="card-title">Recommandations</h4>
+
+                  <h6 class="card-category" id="rs1">
+                   </h6>
+                    <h6 class="card-category" id="rs2">
+                   </h6>
+                    <h6 class="card-category" id="rs3">
+                   </h6>
+                    <h6 class="card-category" id="rs4">
+                   </h6>
+                    <h6 class="card-category" id="rs5">
+                   </h6>
+
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    <div class="col-lg-6 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-tabs card-header-warning">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item">
+                        <form method="POST" enctype="multipart/form-data" id="upload" >
+                        <!--    <i class="material-icons" >cloud </i> Upload File -->
+                               <button type="submit" value="Submit"class="btn btn-warning " data-toggle="modal" >Upload File</button>
+                        </form>
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                  <table class="table table-hover" id="XLtable">
+                    <thead class="text-primary">
+                      <th></th>
+                      <th>Name</th>
+                      <th></th>
+                      <th>Satisfaction</th>
+                    </thead>
+                    <tbody>
+
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+
+
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+
+{% block jquery %}
+<script>
+  $( document ).ready(function() {
+  
+    for( var i=1; i <=8 ;i++)
+      {
+        var id = `nav${i}`;
+        var  nav = document.getElementById(id);
+          nav.className.replace(" active", "");
+      }
+      var nav3 = document.getElementById("nav2");
+      nav3.className+=" active";
+  
+  
+  
+  });
+  </script>
+{% endblock %}
+<script>
+ $(document).on('submit', '#upload',function(e){
+     e.preventDefault();
+        $.ajax({
+
+            type:'POST',
+            url:'{% url "predict:predict_xl" %}',
+             success:function(json) {
+                console.log(json['ypred'])
+                 var table=document.getElementById("XLtable");
+
+
+                for (var i = 1, row; row = table.rows[i]; i++) {
+
+                    row.cells[1].innerHTML=json['Names'][i];
+                    row.cells[3].innerHTML=json['SatisfactionList'][i];
+
+}
+
+             }
+
+ })})
+
+    $(document).on('submit', '#post-form',function(e){
+
+        let s = document.getElementById('SatisfiedCard');
+        let us = document.getElementById('UnsatisfiedCard');
+
+        s.hidden=true;
+        us.hidden=true;
+
+        e.preventDefault();
+        $.ajax({
+
+            type:'POST',
+            url:'{% url "predict:submit_prediction" %}',
+            data:{
+                Conference_call:slider.value,
+                Messagerie_Vocale:slider1.value,
+                Points_fidelite:slider2.value,
+                SOS_Credit:slider3.value,
+                Transfert_Internet:slider4.value,
+                Transfert_Credit:slider5.value,
+                Service_Roaming:slider6.value,
+                Connexion_Internet:slider7.value,
+                Orange_Money:slider8.value,
+                Mobicash_Ooredoo:slider9.value,
+                Mdinar:slider10.value,
+
+
+                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+                action: 'post'
+            },
+            success:function(json) {
+
+
+          //      document.getElementById("sl").innerHTML = json['sepal_length']
+         //       document.getElementById("sw").innerHTML = json['sepal_width']
+           //     document.getElementById("pl").innerHTML = json['petal_length']
+           //     document.getElementById("pw").innerHTML = json['petal_width']
+                if(json['result']=="Satisfied")
+                {
+
+                    let p = document.getElementById('SatisfiedCard');
+                    p.removeAttribute("hidden");
+                    let es = document.getElementById('CardEmpty');
+                    es.hidden=true
+                }
+                else
+                {
+                    let p = document.getElementById('UnsatisfiedCard');
+                    p.removeAttribute("hidden");
+                   let es = document.getElementById('CardEmpty');
+                   es.hidden=true
+                }
+
+             if(json['recommended'][0]!="UNDEFINED")    document.getElementById("r1").innerHTML = json['recommended'][0];
+             if(json['recommended'][1]!="UNDEFINED")    document.getElementById("r2").innerHTML = json['recommended'][1];
+             if(json['recommended'][2]!="UNDEFINED")    document.getElementById("r3").innerHTML = json['recommended'][2];
+             if(json['recommended'][3]!="UNDEFINED")    document.getElementById("r4").innerHTML = json['recommended'][3];
+             if(json['recommended'][4]=="UNDEFINED")    document.getElementById("r5").innerHTML = json['recommended'][4];
+
+             if(json['recommended'][0]!="UNDEFINED")    document.getElementById("rs1").innerHTML = json['recommended'][0];
+             if(json['recommended'][1]!="UNDEFINED")    document.getElementById("rs2").innerHTML = json['recommended'][1];
+             if(json['recommended'][2]!="UNDEFINED")    document.getElementById("rs3").innerHTML = json['recommended'][2];
+             if(json['recommended'][3]!="UNDEFINED")    document.getElementById("rs4").innerHTML = json['recommended'][3];
+             if(json['recommended'][4]=="UNDEFINED")    document.getElementById("rs5").innerHTML = json['recommended'][4];
+
+
+            },
+            error : function(xhr,errmsg,err) {
+
+            }
+        });
+    })
+
+ var slider = document.getElementById("Conference call");
+                        var output = document.getElementById("Conference callv");
+                        output.innerHTML = slider.value;
+                        slider.oninput = function() {output.innerHTML = this.value;}
+
+                        var slider1 = document.getElementById("Messagerie Vocale");
+                        var output1 = document.getElementById("Messagerie Vocalev");
+                        output1.innerHTML = slider1.value;
+                        slider1.oninput = function() {output1.innerHTML = this.value;}
+
+                        var slider2 = document.getElementById("Points fidelite");
+                        var output2 = document.getElementById("Points fidelitev");
+                        output2.innerHTML = slider2.value;
+                        slider2.oninput = function() {output2.innerHTML = this.value;}
+
+                        var slider3 = document.getElementById("SOS Credit");
+                        var output3 = document.getElementById("SOS Creditv");
+                        output3.innerHTML = slider3.value;
+                        slider3.oninput = function() {output3.innerHTML = this.value;}
+
+                        var slider4 = document.getElementById("Transfert Internet");
+                        var output4 = document.getElementById("Transfert Internetv");
+                        output4.innerHTML = slider4.value;
+                        slider4.oninput = function() {output4.innerHTML = this.value;}
+
+                        var slider5 = document.getElementById("Transfert Credit");
+                        var output5 = document.getElementById("Transfert Creditv");
+                        output5.innerHTML = slider5.value;
+                        slider5.oninput = function() {output5.innerHTML = this.value;}
+
+                        var slider6 = document.getElementById("Service Roaming");
+                        var output6 = document.getElementById("Service Roamingv");
+                        output6.innerHTML = slider6.value;
+                        slider6.oninput = function() {output6.innerHTML = this.value;}
+
+                        var slider7 = document.getElementById("Connexion Internet");
+                        var output7 = document.getElementById("Connexion Internetv");
+                        output7.innerHTML = slider7.value;
+                        slider7.oninput = function() {output7.innerHTML = this.value;}
+
+                        var slider8 = document.getElementById("Orange Money");
+                        var output8 = document.getElementById("Orange Moneyv");
+                        output8.innerHTML = slider8.value;
+                        slider8.oninput = function() {output8.innerHTML = this.value;}
+
+                        var slider9 = document.getElementById("Mobicash Ooredoo");
+                        var output9 = document.getElementById("Mobicash Ooredoov");
+                        output9.innerHTML = slider9.value;
+                        slider9.oninput = function() {output9.innerHTML = this.value;}
+
+                        var slider10 = document.getElementById("Mdinar");
+                        var output10 = document.getElementById("Mdinarv");
+                        output10.innerHTML = slider10.value;
+                        slider10.oninput = function() {output10.innerHTML = this.value;}
+</script>
+
+{% endblock %}

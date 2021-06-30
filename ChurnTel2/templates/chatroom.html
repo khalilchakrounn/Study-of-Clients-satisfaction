@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+  <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+  <style>
+    .chatroom h3 {
+    background-color: orange;
+    color: #fff;
+    margin: 0;
+    height: 40px;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.chatroom .input {
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    padding: 0 5px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.chatroom .input input[type=submit] {
+    display: inline-block;
+    background: orange;
+    border: 1px solid #fff;
+    color: #fff;
+    height: 30px;
+    min-width: 70px;
+    line-height: 1;
+    text-align: center;
+    padding: 0;
+    font-size: 12px;
+    flex: 1;
+    box-shadow: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+    transition: all .3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    outline: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.chatroom {
+    width: 100%;
+    height: 600px;
+    color: #343d4e;
+    max-height: 90vh;
+    background-color: wheat;
+    border-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    letter-spacing: normal;
+    overflow: hidden;
+    box-shadow: 0 0 0 2px hsl(0deg 0% 100% / 80%);
+}
+  </style>
+</head>
+<body>
+
+  <div class="chat-container" style="width:1800px; margin:0 auto;"></div>
+
+  <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"/></script>
+  <script type="text/javascript";>
+    var chatroom = new window.Chatroom({
+      host: "http://localhost:5005",
+      title: "Orange assistant",
+      container: document.querySelector(".chat-container"),
+      welcomeMessage: "Bonjour, je suis un assitant de Orange. Tu peux commencer par dire 'Salut'. ",
+      //speechRecognition: "fr-FR",
+      //voiceLang: "fr-FR"
+    });
+    
+    chatroom.openChat();
+    
+    
+  </script>
+</body>
+
+<script>
+  $( document ).ready(function() {
+  
+    for( var i=1; i <=8 ;i++)
+      {
+        var id = `nav${i}`;
+        var  nav = document.getElementById(id);
+          nav.className.replace(" active", "");
+      }
+      var nav3 = document.getElementById("nav4");
+      nav3.className+=" active";
+  
+  
+  
+  });
+  </script>
+
+
+  {% endblock %}
+
+
+
+  

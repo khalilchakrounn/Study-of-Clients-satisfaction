@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+  <div  style="width:1800px; margin:0 auto;">
+    <div class="card">
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title">Social Media </h4>
+                  <p class="card-category"> </p>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="profile">
+                      <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=22c1d765-6f78-4f5c-bf7a-5b557be8930d&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+ </div>
+
+
+<script>
+$( document ).ready(function() {
+
+
+
+    for( var i=1; i <=8 ;i++)
+    {
+      var id = `nav${i}`;
+      var  nav = document.getElementById(id);
+        nav.className.replace(" active", "");
+    }
+    var nav3 = document.getElementById("nav3");
+    nav3.className+=" active";
+
+
+
+
+});
+</script>
+
+{% endblock %}

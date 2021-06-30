@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container pt-5" style="position:absolute;  left:30px;">
+        <div class="row">
+
+        <h1>Prediction Results</h1>
+
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                <th scope="col">#</th>
+                    <th scope="col">Monthly Charges</th>
+                <th scope="col">Tenure Months</th>
+                    <th scope="col">Senior Citizen</th>
+                    <th scope="col">Partner</th>
+                <th scope="col">Dependents</th>
+                <th scope="col">Internet Service</th>
+                <th scope="col">Online Security</th>
+                    <th scope="col">Online Backup</th>
+                    <th scope="col">Device Protection</th>
+                    <th scope="col">Tech Support</th>
+                    <th scope="col">Streaming TV</th>
+                    <th scope="col">Streaming Movies</th>
+                    <th scope="col">Contract</th>
+                    <th scope="col">Paperless Billing</th>
+                    <th scope="col">Payment Method</th>
+                <th scope="col">Prediction</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for data in dataset %}
+                    <tr {%   if data.classification == "Churn" %}  class="table-danger" {% else %} class="table-success" {% endif %}>
+                    <th scope="row">{{ data.id }}</th>
+
+                        <td>{{ data.Monthly_Charges  }}</td>
+                        <td>{{ data.Tenure_Months  }}</td>
+                        <td>{{ data.Senior_Citizen  }}</td>
+                        <td>{{ data.Partner  }}</td>
+                    <td>{{ data.Dependents  }}</td>
+                    <td>{{ data.Internet_Service  }}</td>
+                    <td>{{ data.Online_Security  }}</td>
+
+                         <td>{{ data.Online_Backup   }}</td>
+                         <td>{{ data.Device_Protection   }}</td>
+                         <td>{{ data.Tech_Support   }}</td>
+                         <td>{{ data.Streaming_TV   }}</td>
+                         <td>{{ data.Streaming_Movies   }}</td>
+                         <td>{{ data.Contract   }}</td>
+                        <td>{{ data.Paperless_Billing  }}</td>
+                        <td>{{ data.Payment_Method   }}</td>
+                    <td>{{ data.classification }}</td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

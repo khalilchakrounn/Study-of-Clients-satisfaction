@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+  <div  style="width:1800px; margin:0 auto;">
+    <div class="card">
+                <div class="card-header card-header-tabs card-header-warning">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <span class="nav-tabs-title"></span>
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#profile" data-toggle="tab">
+                            <i class="material-icons"></i> Global
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#messages" data-toggle="tab">
+                            <i class="material-icons"></i> Services
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#settings" data-toggle="tab">
+                            <i class="material-icons"></i> Details
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="profile">
+                      <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=0d1bc5bc-3d09-4f15-8b88-d7dd790f1fdb&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+                    </div>
+                    <div class="tab-pane" id="messages">
+                        <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=e9ae91b2-5aa5-4633-9614-81b574ad3883&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+                    </div>
+                    <div class="tab-pane" id="settings">
+                        <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=7ffba9e6-4c12-4827-94a3-6bf88195f439&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+ </div>
+
+
+<script>
+$( document ).ready(function() {
+
+  for( var i=1; i <=8 ;i++)
+    {
+      var id = `nav${i}`;
+      var  nav = document.getElementById(id);
+        nav.className.replace(" active", "");
+    }
+    var nav3 = document.getElementById("nav1");
+    nav3.className+=" active";
+
+
+
+});
+</script>
+
+{% endblock %}
+
