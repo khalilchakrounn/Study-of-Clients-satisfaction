@@ -1,0 +1,103 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - transfert
+  - transfert_de_crédit
+  - transfert_internet
+  - Fidélité
+  - SOS crédit
+  - transformer_points
+  - Acheter_Produit
+  - about
+
+responses:
+  utter_greet:
+  - text: "Salut! comment ca va?"
+  - text: "Salut! Comment je peux t'aider ?"
+
+  utter_cheer_up:
+  - text: "ci joint qlq chose pour te remonter le moral:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "est-ce que ça t'a aidé?"
+
+  utter_happy:
+  - text: "super, continues !"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "Je suis un bot, alimenté par Rasa."
+
+  utter_transfert:
+  - text: "Vous vouler le service de transfert de crédit ou d'internet ?"
+
+  utter_transfert_de_crédit:
+  - text: "Pour effectuer un transfert de crédit vous tapez 116, le numéro du destinataire, le montant à transférerle code (0000) #. Le montant doit être écrit en Dinars sans les zéros. Exemple 1 pour 1 Dinar et il faut toujours laisser un dinar sur le compte après chaque transfert."
+  
+  utter_transfert_internet:
+  - text: "Pour Transférer de l'internet depuis votre mobile est désormais possible via *129# d'un mobile Orange ou *147# d'une Flybox Orange ou via par l'application My Orange ! Vous pouvez dépanner un ami ou un proche en lui transférant de l'internet sur son téléphone , sur sa Clé ou bien Flybox."
+
+  utter_SOS:
+  - text : "SOS crédit ou Minute SOS ou SOS Solde
+  Il suffit
+   de composer *122# et d'activer l'une des options SOS Crédit disponibles. Ce service est facturé 190 Millimes la minute vers tous les opérateurs . Le montant de l'option est
+  automatiquement débité lors de la prochaine recharge.
+  Pour suivre votre solde SOS crédit allez sur My Orange ou composez *122*7#
+  Pour suivre  le montant qu’il vous reste à rembourser dans le cadre du SOS crédit, composez *122*8#"
+
+  utter_transformer_points:
+  - text: "Tapez *112# depuis votre mobile Orange  ou tapez directement *112*2# et consultez le solde total de vos points cadeaux. Vous pouvez consulter le solde de points par produit : Mobile, Clé 3G, Flybox et ADSL .
+  Le solde de vos points cadeaux s’affiche aussi dans la rubrique Espace fidélité de votre compte Web Orange .
+  *Les points cadeaux ont une validité de 24 mois."
+
+  utter_Fidélité/Gagner_Points:
+  - text: "Orange Fidélité récompense toutes vos consommations : Fixe, Mobile et Internet.
+  Pour 1dt consommé ou facturé , 10 points s’ajoutent à votre solde total de points cadeaux
+  Si vous êtes client Orange Fidélité Gold, le nombre de points attribués est de 15 points pour chaque dinars consommés sur toutes les offres Orange.
+  Profitez de Bonus supplémentaire :
+  - un Bonus de bienvenue de 100 points dès votre inscription
+  - un Bonus de convergence de 20 points dés l’ajout de votre premier produit Orange internet
+  - Un Bonus d’ancienneté à partir de 100 points le jour d’anniversaire de votre contrat.
+  - Un Bonus sur les appels reçus depuis l’international : 200 points pour chaque cumul de 30 minutes d’appels reçus internationaux ( fixe, mobile provenant de l’international)*"
+
+  utter_Acheter_Produit:
+  - text: "Transformez vos points en boutique et payez la totalité ou une partie du prix hors taxes* du produit choisi en points cadeaux et le reste en espèce.
+  *les taxes sont payées en espèces
+
+  Paliers de prix HT du produit
+  Entre 0 à 50dt
+  Entre 50dt et 100dt
+  Entre 100 à 300dt
+  Entre 300dt et 600dt
+  plus que 600
+  Possibilité de paiement en points cadeaux du prix HT
+100 %
+100% 50%
+100% 50% 30%
+100% 50% 30% 20%
+100% 50% 30% 20% 10%
+ "
+  utter_about:
+  - text: "Grâce à vos points, bénéficiez d’un large choix de cadeaux * :
+
+- Bonus valable vers tous les opérateurs
+- Internet Mobile
+- SMS valables vers tous les opérateurs
+- Internet sur vos Clés et Flybox
+- Remises sur vos factures
+- Téléphones et accessoires"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

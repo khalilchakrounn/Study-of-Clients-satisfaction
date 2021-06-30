@@ -1,0 +1,142 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: transfert path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: transfert
+  - action: utter_transfert
+  - intent: transfert_de_crédit
+  - action: utter_transfert_de_crédit
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: transfert path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: transfert
+  - action: utter_transfert
+  - intent: transfert_internet
+  - action: utter_transfert_internet
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: transfert path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: transfert
+  - action: utter_transfert
+  - intent: transfert_de_crédit
+  - action: utter_transfert_de_crédit
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: transfert path 4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: transfert
+  - action: utter_transfert
+  - intent: transfert_internet
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: transfert_de_crédit 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: transfert_de_crédit
+  - action: utter_transfert_de_crédit
+
+- story: transfert_internet 
+  steps:
+  - intent: greet 
+  - action: utter_greet
+  - intent: transfert_internet
+  - action: utter_transfert_internet
+
+- story: SOS crédit
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: SOS crédit
+    - action: utter_SOS
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_goodbye
+
+- story: Acheter_Produit
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: Acheter_Produit
+    - action: utter_Acheter_Produit
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_goodbye
+
+- story: transformerpoints
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: transformer_points
+    - action: utter_transformer_points
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_goodbye
+
+- story: Gagner_Points
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: Fidélité/Gagner_Points
+    - action: utter_Fidélité/Gagner_Points
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_goodbye
+
+- story: Gagner_Points
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: about
+    - action: utter_about
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_goodbye

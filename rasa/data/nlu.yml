@@ -1,0 +1,229 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - bonjour
+    - salut
+    - slt
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+    - heya
+    - hihi
+    - sup
+    - what's up
+    - hey there
+    - hello buddy
+    - wazzup
+    - bjr
+    - winek
+ 
+
+- intent: goodbye
+  examples: |
+    - bye
+    - au revoir
+    - ciao
+    - bye bye
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - goodbye
+    - have a nice day
+    - see you around
+    - see you later
+
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - oui
+    - sure
+    - definitvemnt
+    - bon
+    - ok
+    - okay
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Bien sur
+    - mriguel
+    - c'est ok
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - non
+    - jamais
+    - je ne pense pas
+    - j'aime pas
+    - pas du tout
+    - pas trop
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - je veux pas
+    - je suis pas convaincu
+    - pas vraiment
+
+
+- intent: mood_great
+  examples: |
+    - parfait
+    - génial
+    - bon
+    - formidable
+    - trés bon
+    - je me sens bien
+    - ca va 
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - ca vas pas
+    - désagréable
+    - je vais mal
+    - je me sens mal
+    - triste
+    - extremement triste
+    - mauvais jour
+    - mauvaise journée
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - es tu un bot?
+    - est tu un humain?
+    - je parle a un humain?
+    - je parle a un robot?
+    - je suis entrain de parler avec un robot?
+    - je suis entrain de parler avec un bot?
+    - t'es humain?
+    - t ki?
+    - t'es qui?
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: transfert
+  examples: |
+    - transfert
+    - transférer
+    - envoyer
+    - passer
+    - transmettre
+    - céder
+    - je veux transmettre 
+    - comment transférer ?
+
+
+- intent: transfert_de_crédit
+  examples: |
+    - transfert de crédit
+    - *116#
+    - montant
+    - solde
+    - comment faire le transfert de crédit
+    - kifeh neb3ath flous
+    - envoyer de l'argent
+    - Je veux envoyer de l'argent à un autre numéro Orange, en utilisant * 116 * numéro de téléphone * argent * 0000 #
+
+
+- intent: transfert_internet 
+  examples: |
+    - transfert internet
+    - internet 
+    - *147#
+    - nheb internet 
+    - kifeh internet 
+    - comment faire le transfert internet
+    - flybox 
+    - mobile orange
+
+- intent: SOS crédit
+  examples: |
+    - Minute SOS
+    - SOS Service
+    -comment faire SOS crédit
+    -kifeh naamel SOS crédit
+    - Minute SOS
+    - SOS Service
+    -comment faire SOS crédit
+    -kifeh naamel SOS crédit
+    -Comment faire bonus Orange
+
+- intent: about
+  examples: |
+    -Combien me rapportent mes points cadeaux?
+    -c'est quoi les cadeaux?
+    -chneya nerbah
+
+- intent: Fidélité/Gagner_Points
+  examples: |
+    - points fidelite
+    -pts
+    -Comment gagner des points  ?
+    -kifeh nerbah des points?
+
+- intent: transformer_points
+  examples: |
+    -Comment ça marche les points orange ?
+    -Comment transformer les points?
+    -Comment savoir mes point ?
+    -Comment consulter mes points cadeaux?
+    -Comment m'inscrire?
+    -kifeh nbadel les points?
+
+- intent: Acheter_Produit
+  examples: |
+    -Comment acheter un produit?
+    -Comment changer de mobile Orange avec les points
+    -Comment obtenir un téléphone gratuit chez Orange ?
+    -kifeh nerbah tel?
+    -kifeh nechri b les points?
+    -kifeh nerbah produit?
